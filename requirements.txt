@@ -1,0 +1,26 @@
+# for Whisper
+faster-whisper==0.9.0
+ctranslate2==3.24.0
+ffmpeg-python==0.2.0
+# for Demucs
+demucs==4.0.1
+PySoundFile
+scipy
+invisible-watermark
+fonts
+font-roboto
+# gradio
+gradio==3.50.2
+yt-dlp==2023.11.16
+json5
+more_itertools
+pyyaml
+pandas==1.5.0
+cryptography
+# one-click
+tqdm
+markdown
+rich
+# mdx
+librosa==0.9.1
+onnxruntime-gpu==1.17.1
