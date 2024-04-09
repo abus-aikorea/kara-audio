@@ -2,8 +2,8 @@
 
 🌍 [한국어](README.kor.md) ∙ [English](README.eng.md) ∙ [日本語](README.jpn.md)
 
-[![GitHub License](https://img.shields.io/github/license/abus-aikorea/ai-cover)](LICENSE)
-[![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/ai-cover)](https://github.com/abus-aikorea/ai-cover/releases)
+[![GitHub License](https://img.shields.io/github/license/abus-aikorea/kara-audio)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
 
 The best gradio web-ui for vocal remover that uses demucs and mdx-net. 
 Automatic subtitle creation using faster whisper. Easy one click installation. Fully portable.
@@ -63,7 +63,7 @@ Automatic subtitle creation using faster whisper. Easy one click installation. F
     + Or, copy the already unzipped folder (**ai-cover-x**) to an appropriate location on your computer.
 
 * B. Free version
-  + Download and unzip the latest release ( **Source code (zip)** ) from [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/ai-cover)](https://github.com/abus-aikorea/ai-cover/releases) 
+  + Download and unzip the latest release ( **Source code (zip)** ) from [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
   + Or, download source code with git clone
 
 ```bash
