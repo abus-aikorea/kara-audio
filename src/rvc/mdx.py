@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 handler = logging.StreamHandler()
-handler.setLevel(logging.ERROR)     # DEBUG INFO WARNING ERROR CRITICAL
+handler.setLevel(logging.WARNING)     # INFO DEBUG WARNING ERROR CRITICAL
 formatter = logging.Formatter('MDX %(levelname)s : %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
@@ -79,12 +79,10 @@ class MDX:
     DEFAULT_CHUNK_SIZE = 0 * DEFAULT_SR
     DEFAULT_MARGIN_SIZE = 1 * DEFAULT_SR
 
-    DEFAULT_PROCESSOR = 0
-
-    def __init__(self, model_path: str, params: MDXModel, processor=DEFAULT_PROCESSOR):
+    def __init__(self, model_path: str, params: MDXModel):
 
         # Set the device and the provider (CPU or CUDA)
-        self.device = torch.device(f'cuda:{processor}') if processor >= 0 else torch.device('cpu')
+        self.device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
         # self.provider = ['CUDAExecutionProvider'] if processor >= 0 else ['CPUExecutionProvider']
 
         self.model = params
@@ -260,13 +258,19 @@ class MDX:
 
 
 def run_mdx(model_params, output_dir, model_path, filename, exclude_main=False, exclude_inversion=False, suffix=None, invert_suffix=None, denoise=False, keep_orig=True, m_threads=2):
-    device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
-    logger.debug(f'run_mdx: device = {device}')
+    if torch.cuda.is_available():
+        device = torch.device('cuda:0')
+        device_properties = torch.cuda.get_device_properties(device)
+        vram_gb = device_properties.total_memory / 1024**3
+        m_threads = 1 if vram_gb < 8 else 2        
+    else:
+        device = torch.device('cpu')
+        vram_gb = 0
+        m_threads = 1
 
-    device_properties = torch.cuda.get_device_properties(device)
-    vram_gb = device_properties.total_memory / 1024**3
-    m_threads = 1 if vram_gb < 8 else 2
+    logger.debug(f'run_mdx: device = {device}')
     logger.debug(f'run_mdx: vram_gb = {vram_gb}, m_threads = {m_threads}')
+        
 
     model_hash = MDX.get_hash(model_path)
     mp = model_params.get(model_hash)
