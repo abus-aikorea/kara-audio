@@ -6,6 +6,12 @@
 [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
 
 
+### 実行画面
+
+https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9558-921dc72295ef
+
+
+
 ## はじめに
 * Kara-AudioはYouTubeの動画をあなただけの**カラオケムービー**にしています。
 * **録音録**、**会議録**はもちろん、映画、ドラマ、ニュースの**字幕**を作ることができます。
@@ -82,12 +88,6 @@ git clone https://github.com/abus-aikorea/kara-audio.git
     #### Browserが自動的に実行されない場合
     - Windows-Commnadウィンドウを終了し、start.batを再実行するか、
     - Browserを直接実行し、Windows-Commnadウィンドウに表示されたアドレス（例：**http://127.0.0.1:7894** ）をアドレスウィンドウに入力します。
-
-
-### 実行画面
-
-https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9558-921dc72295ef
-
 
 
 
