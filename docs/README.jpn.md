@@ -6,6 +6,9 @@
 [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
 
 
+The best gradio web-ui for vocal remover that uses demucs and mdx-net. Automatic subtitle creation using faster whisper. Easy one click installation. Fully portable.
+
+
 ### 実行画面
 
 https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9558-921dc72295ef
