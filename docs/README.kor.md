@@ -9,6 +9,12 @@ The best gradio web-ui for vocal remover that uses demucs and mdx-net.
 Automatic subtitle creation using faster whisper. Easy one click installation. Fully portable.
 
 
+### 실행 화면
+
+https://github.com/abus-aikorea/kara-audio/assets/161691694/d085cebf-a1b9-4428-a7f3-a43610a5ab87
+
+
+
 ## 소개
 * Kara-Audio는 유튜브 동영상을 당신만의 **노래방 뮤비**로 만들어 드립니다.
 * **녹취록**, **회의록**은 물론, 영화, 드라마, 뉴스의 **자막**을 만들수 있습니다.
@@ -86,12 +92,6 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 #### Browser가 자동으로 실행되지 않는 경우
 - Windows-Commnad 창을 종료하고, start.bat 을 다시 실행하거나
 - Browser를 직접 실행하고, Windows-Command 창에 표시된 주소(예, **http://127.0.0.1:7894** )를 주소창에 입력합니다.
-
-
-### 실행 화면
-
-https://github.com/abus-aikorea/kara-audio/assets/161691694/d085cebf-a1b9-4428-a7f3-a43610a5ab87
-
 
 
 ### step 3. 프로그램 제거
