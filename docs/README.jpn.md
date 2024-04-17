@@ -16,6 +16,8 @@ https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9
 
 
 ## はじめに
+Kara-AudioはAI Studioの新しい名前です。from 2024-04-10
+
 * Kara-AudioはYouTubeの動画をあなただけの**カラオケムービー**にしています。
 * **録音録**、**会議録**はもちろん、映画、ドラマ、ニュースの**字幕**を作ることができます。
 * UVR5が提供する**ボーカルリムーバー**とOpenAI Whisperを利用した**自動字幕**機能を搭載しています。
@@ -79,14 +81,18 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 ## step 2. インストールして実行する方法
 1. `configure.bat`の実行
-     * Windowsにffmpeg、CUDA（NVIDIA GPUを使用している場合）をインストールします。
-     * 最初の1回だけ実行するだけです。
+     * WindowsにffmpegとCUDA（NVIDIA GPUを使用している場合）とWindows SDKをインストールします。
+     * インストールにはインターネットに接続する必要があり、コンピュータの仕様によっては1時間以上かかることがあります。
+     * インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。 （作業が止まったように見える場合は、スペースバーをたまに押してください）
+     * インストール中にエラーが発生した場合は、uninstall.batを実行してから最初から再起動することをお勧めします。
+     * configure.batは最初の1回だけ実行できます。
+
 2. `start.bat`の実行
      - Kara-Audioを起動します。 Web-UIが自動的に起動します。 
      - 初回実行時には、Kara-Audioのインストール作業を先に進めます。
-     - Kara-Audioのインストールにはインターネット接続が必要であり、システムによってはインストールに1時間以上かかることがあります。
-     - インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。
-     - インストール中に問題が発生した場合は、installer_filesフォルダを削除してstart.batを再実行してください。
+     - インストールにはインターネットに接続する必要があり、システムによっては1時間以上かかることがあります。
+     - インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。 （作業が止まったように見える場合は、スペースバーをたまに押してください）
+     - インストール中にエラーが発生した場合は、installer_filesフォルダを削除してstart.batを再実行してください。
 
     #### Browserが自動的に実行されない場合
     - Windows-Commnadウィンドウを終了し、start.batを再実行するか、
@@ -97,9 +103,23 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 ## step 3. アンインストールする方法
 * `uninstall.bat`の実行
   - installer_files フォルダを削除します。 
-  - Windows にインストールされている ffmepg および CUDA パッケージを削除します (選択した場合)
+  - Windowsにインストールしたffmepg、CUDAパッケージ、Windows SDKを削除します（選択した場合）
 
 * Kara-Audioは**ポータブル**インストールがデフォルトです。 プログラムの削除は、インストールフォルダを削除するだけで十分です。
+
+
+## 使用のヒント
+
+1. Demixerの使用
+   - Facebook ResearchのDemucsモデル（htdemucs、htdemucs_6s、htdemucs_ft、mdx_extra）はすべて良いパフォーマンスを示しています。
+   - MDX-Netでは、UVR-MDX-NET-Voc_FT、Kim_Vocal_2、UVR_MDXNET_KARA_2などが良いパフォーマンスを示しています。
+   - モデルを一つずつ使ってみて、目的に合ったものを探してください。
+   - NVIDIA 最新のGPU(6GB以上のVRAM)の使用を推奨します. VRAMが不足すると、Out-Of-Memoryエラーが発生する可能性があります。
+
+2. Whisperの使用
+   - Large-V2モデルが最適です。残りは認識率が悪い。
+   - オーディオの言語が「韓国語」の場合、Whisperの言語設定も「韓国語」にするのが最善です。
+   - オーディオの言語が「韓国語」のとき、Whisperの言語設定を「日本語」にすると「日本語」を出力しますが、精度は低下します。 （むしろグーグル翻訳者は良いです。）
 
 ## 注意事項
 Windows Defenderが誤ってバッチファイルをトロイの木馬として認識している場合、これはしばしば「False Positive」と呼ばれます。この問題を解決するには、次の手順を実行できます。

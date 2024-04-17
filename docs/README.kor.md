@@ -16,13 +16,15 @@ https://github.com/abus-aikorea/kara-audio/assets/161691694/d085cebf-a1b9-4428-a
 
 
 ## 소개
+Kara-Audio는 AI Studio의 새이름입니다. from 2024-04-10 
+
 * Kara-Audio는 유튜브 동영상을 당신만의 **노래방 뮤비**로 만들어 드립니다.
 * **녹취록**, **회의록**은 물론, 영화, 드라마, 뉴스의 **자막**을 만들수 있습니다.
 * UVR5에서 제공하는 **보컬 리무버**와 OpenAI Whisper를 이용한 **자동자막** 기능을 탑재하고 있습니다. 
 * Kara-Audio는 **원클릭**으로 손쉽게 설치할 수 있으며, Gradio Web-UI 를 제공합니다. 
 
 
-### 주요 기능
+## 주요 기능
 
 * `Kara Audio` 탭
   - YouTube 다운로더, 보컬 분리, 자동자막을 통합환경으로 제공
@@ -81,14 +83,20 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 ### step 2. 프로그램 설치 및 실행
 1. `configure.bat` 실행
-   - Windows에 ffmpeg 과 CUDA(NVIDIA GPU를 사용하는 경우)를 설치합니다. 
-   - 최초 1회만 실행하면 됩니다.
+   - Windows에 ffmpeg 과 CUDA(NVIDIA GPU를 사용하는 경우) 및 Windows SDK를 설치합니다. 
+   - 설치를 위해서는 인터넷에 연결되어 있어야 하고, 컴퓨터 사양에 따라 1시간 이상 소요될 수 있습니다.
+   - 설치 중에는 절대 Windows-Command 창을 종료하지 마세요. (작업이 멈춘것 처럼 보인다면 스페이스바를 가끔씩 눌러보세요)
+   - 설치중 오류가 발생한 경우, uninstall.bat를 실행한 후 처음부터 다시 시작하는 것을 권장합니다.
+   - configure.bat 는 최초 1회만 실행하면 됩니다.
+
+
 2. `start.bat` 실행
    - Kara-Audio 를 시작합니다. Web-UI가 자동으로 실행됩니다. 
    - 최초 실행시에는 Kara-Audio 설치 작업을 먼저 진행합니다. 
-   - Kara-Audio 설치는 인터넷 연결을 필요로 하며, 시스템에 따라 설치에 1시간 이상이 소요될 수 있습니다. 
-   - 설치 중에는 절대 Windows-Command 창을 종료하지 마세요.
-   - 설치중 문제가 발생한 경우, installer_files 폴더를 삭제하고 start.bat를 다시 실행하세요.
+   - 설치를 위해서는 인터넷에 연결되어 있어야 하고, 시스템에 따라 1시간 이상 소요될 수 있습니다. 
+   - 설치 중에는 절대 Windows-Command 창을 종료하지 마세요. (작업이 멈춘것 처럼 보인다면 스페이스바를 가끔씩 눌러보세요)
+   - 설치중 오류가 발생한 경우, installer_files 폴더를 삭제하고 start.bat를 다시 실행하세요.
+
 #### Browser가 자동으로 실행되지 않는 경우
 - Windows-Commnad 창을 종료하고, start.bat 을 다시 실행하거나
 - Browser를 직접 실행하고, Windows-Command 창에 표시된 주소(예, **http://127.0.0.1:7894** )를 주소창에 입력합니다.
@@ -97,9 +105,22 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 ### step 3. 프로그램 제거
 * `uninstall.bat` 실행: 
   - installer_files 폴더를 제거합니다. 
-  - Windows 에 설치한 ffmepg, CUDA 패키지를 제거합니다(선택할 경우)
+  - Windows 에 설치한 ffmepg, CUDA 패키지, Windows SDK를 제거합니다(선택할 경우)
 
 * Kara-Audio는 **포터블** 설치가 기본입니다. 프로그램의 제거는 설치 폴더를 삭제하는 것으로 충분합니다.
+
+
+## 이용팁
+
+1. Demixer 사용
+   - Facebook Research 의 Demucs 모델(htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra)들은 모두 좋은 성능을 보여줍니다.
+   - MDX-Net에서는 UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2 등이 좋은 성능을 보여줍니다.
+   - 모델들을 하나씩 사용해 보고, 목적에 맞는 것을 찾으시길 바랍니다.
+   - NVIDIA 최신 GPU (VRAM 6GB 이상) 사용을 권장합니다. VRAM 부족시 Out-Of-Memory 에러가 발생할 수 있습니다.
+2. Whisper 사용
+   - Large-V2 모델이 가장 좋습니다. 나머지는 인식률이 나쁩니다.
+   - 오디오의 언어가 '한국어'인 경우, Whisper 언어 설정도 '한국어'로 하는 것이 가장 좋습니다.
+   - 오디오의 언어가 '한국어'일 때, Whisper 언어 설정을 '일본어'로 하면 '일본어' 를 출력하긴 합니다만, 정확도는 떨어집니다. (차라리 구글 번역기가 낫습니다.)
 
 
 ## 주의사항

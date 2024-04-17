@@ -17,6 +17,8 @@ https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b
 
 
 ## Introduction
+Kara-Audio is the new name of AI Studio. from 2024-04-10
+
 * Kara-Audio turns YouTube videos into your own **karaoke music videos**.
 * You can create **transcripts**, **meeting minutes**, as well as **subtitles** for movies, dramas, and news.
 * It is equipped with **Vocal Remover** provided by UVR5 and **Automatic Subtitles** function using OpenAI Whisper.
@@ -79,14 +81,19 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 ### step 2. How to install and run
 1. Run `configure.bat`
-     * Install ffmpeg and CUDA (if using NVIDIA GPU) on Windows.
-     * You only need to run it the first time.
+     * Install ffmpeg and CUDA (if using an NVIDIA GPU) and the Windows SDK on Windows.
+     * Installation requires an Internet connection and may take more than an hour depending on your computer specifications.
+     * Never close the Windows-Command window during installation. (If the operation appears to have stopped, press the space bar occasionally)
+     * If an error occurs during installation, we recommend running uninstall.bat and starting again from the beginning.
+     * configure.bat only needs to be run once.
+
 2. Run `start.bat`
      * Start Kara-Audio. Web-UI will run automatically.
      * When running for the first time, install Kara-Audio first.
-     * Kara-Audio installation requires an Internet connection, and depending on the system, installation may take more than an hour.
-     * Never close the Windows-Command window during installation.
-     * If problems occur during installation, delete the installer_files folder and run start.bat again.
+     * Installation requires an Internet connection and may take more than an hour depending on your computer specifications.
+     * Never close the Windows-Command window during installation. (If the operation appears to have stopped, press the space bar occasionally)
+     * If an error occurs during installation, delete the installer_files folder and run start.bat again.
+
     #### When the browser does not run automatically
      * Close the Windows-Commnad window and run start.bat again or
      * Run the browser directly and enter the address displayed in the Windows-Command window (e.g. **http://127.0.0.1:7894** ) into the address bar.
@@ -95,9 +102,23 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 ### step 3. How to uninstall
 * Run `uninstall.bat`
   * Remove installer_files . 
-  * Remove the ffmepg and CUDA packages installed on Windows (if selected)
+  * Remove the ffmepg, CUDA packages and Windows SDK installed on Windows (if selected)
 
 * Kara-Audio has a **portable** installation as standard. To uninstall the program, deleting the installation folder is sufficient.
+
+
+## Tips for use
+
+1. About Demixer
+   - Facebook Research's Demucs models (htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra) all show good performance.
+   - In MDX-Net, UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2, etc. show good performance.
+   - Try using the models one by one and find one that suits your purpose.
+   - We recommend using the latest NVIDIA GPU (VRAM 6GB or higher). Out-of-memory errors may occur if VRAM is insufficient.
+
+2. About Whisper
+   - Large-V2 model is best. The rest have poor recognition rates.
+   - If the audio language is 'Korean', it is best to set the Whisper language to 'Korean' as well.
+   - When the audio language is 'Korean', if you set the Whisper language to 'Japanese', 'Japanese' will be output, but the accuracy will be low. (Google Translator is better.)
 
 
 ## Caution!!
