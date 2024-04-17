@@ -75,7 +75,9 @@
     "Input Video": "Input Video",
     "AI Cover": "AI Cover",
     "Generate": "Generate",
-    "Demixing": "Demixing"
+    "Demixing": "Demixing",
+    "Denoise" : "Denoise",
+    "Recognition performance is improved by adding noise removal." : "Recognition performance is improved by adding noise removal."
 
 
 }

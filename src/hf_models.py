@@ -4,20 +4,8 @@ from huggingface_hub import hf_hub_download
 import zipfile
 import shutil
 
-
-##############################################################################################
-# logging
-##############################################################################################
-
-import logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-
-handler = logging.StreamHandler()
-handler.setLevel(logging.WARNING)     # DEBUG INFO WARNING ERROR CRITICAL
-formatter = logging.Formatter('HF-MODEL %(levelname)s : %(message)s')
-handler.setFormatter(formatter)
-logger.addHandler(handler)
+import structlog
+logger = structlog.get_logger()
 
 
 # Environment
@@ -97,6 +85,8 @@ class HF_Model():
     
     
 HF_MODELS = [
+    HF_Model('ABUS-AI/AICover-v0.1', 'rvc-model', 'rmvpe.pt', 181184272, 0),           # level 0
+    HF_Model('ABUS-AI/AICover-v0.1', 'rvc-model', 'hubert_base.pt', 189507909, 0),     # level 0
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'kuielab_a_bass.onnx', 29703204, 1),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'kuielab_a_drums.onnx', 29703204, 1),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'kuielab_a_vocals.onnx', 29703204, 1),
@@ -110,7 +100,7 @@ HF_MODELS = [
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR_MDXNET_3_9662.onnx', 29704436, 1, 'UVR-MDX-NET 3'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR_MDXNET_9482.onnx', 29704436, 1),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR_MDXNET_KARA.onnx', 29704436, 1, 'UVR-MDX-NET Karaoke'),
-    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR_MDXNET_KARA_2.onnx', 52786726, 1, 'UVR-MDX-NET Karaoke 2'),  # level 1
+    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR_MDXNET_KARA_2.onnx', 52786726, 0, 'UVR-MDX-NET Karaoke 2'),  # level 0
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Inst_Main.onnx', 52786726, 1, 'UVR-MDX-NET Inst Main'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET_Crowd_HQ_1.onnx', 59074342, 1, 'UVR-MDX-NET Crowd HQ 1'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'Kim_Inst.onnx', 66759214, 1, 'Kim Inst'),
@@ -124,12 +114,14 @@ HF_MODELS = [
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Inst_HQ_2.onnx', 66759214, 1, 'UVR-MDX-NET Inst HQ 2'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Inst_HQ_3.onnx', 66759214, 1, 'UVR-MDX-NET Inst HQ 3'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Inst_HQ_4.onnx', 59074342, 1, 'UVR-MDX-NET Inst HQ 4'),
-    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Voc_FT.onnx', 66762490, 1),      # level 1
-    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'Reverb_HQ_By_FoxJoy.onnx', 66780123, 1, 'Reverb HQ (FoxJoy)'),   # level 1    
-    HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '955717e8-8726e21a.th', 84141911, 0, 'htdemucs'),        # level 0
+    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Voc_FT.onnx', 66762490, 0),      # level 0
+    HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'Reverb_HQ_By_FoxJoy.onnx', 66780123, 0, 'Reverb HQ (FoxJoy)'),   # level 0    
+    HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '955717e8-8726e21a.th', 84141911, 1, 'htdemucs'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '5c90dfd2-34c22ccb.th', 54996327, 1, 'htdemucs_6s'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'htdemucs_ft.zip', 311843957, 1, 'htdemucs_ft'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'mdx_extra.zip', 579915263, 1, 'mdx_extra'),        
+    HF_Model('phant0m4r/LiSA', 'voice-model', 'LiSA.zip', 263711433, 0),        # level 0
+    HF_Model('pjesek/AdoRVCv2', 'voice-model', 'AdoRVCv2.zip', 330871899, 0),   # level 0
 ]
 
 
@@ -145,11 +137,14 @@ def hf_download_all_models():
             continue
         hf_model.download()
         
-def hf_download_models(level : int):
+def hf_download_models(file_type: str, level : int):
     os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = 'True'
     for hf_model in HF_MODELS:
         if hf_model.level > level:
             continue
+        if hf_model.file_type != file_type:
+            continue
+        
         if hf_model.has_local_file():
             continue
         hf_model.download()    

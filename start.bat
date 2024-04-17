@@ -108,6 +108,8 @@ if "%abus_genuine_installed%" == "F" (
 	call python -m pip install cryptography
 	call python -m pip install huggingface-hub==0.17.3
 )
+
+set LOG_LEVEL=DEBUG
 call python one_click.py %*
 
 :: below are functions for the script   next line skips these during normal execution

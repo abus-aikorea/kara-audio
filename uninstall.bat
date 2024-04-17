@@ -36,6 +36,8 @@ if errorlevel 2 (
     :: Uninstall packages
     choco uninstall -y ffmpeg
     choco uninstall -y cuda --version=11.8.0.52206
+    choco uninstall -y visualstudio2022-workload-vctools
+    choco uninstall -y visualstudio2022buildtools
 )
 
 

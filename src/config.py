@@ -18,6 +18,7 @@ class UserConfig:
             "default_model_name": "medium",
             "language": "Korean",
             "highlight_words": False,
+            "denoise": False,
             "burn_subtitles": False,
             "video_quality": "best",
             "audio_format": "flac",

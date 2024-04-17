@@ -54,6 +54,8 @@ if !IS_NVIDIA_GPU! equ 1 (
 )
 
 choco install -y ffmpeg
+choco install -y visualstudio2022buildtools --verbose
+choco install -y visualstudio2022-workload-vctools --verbose
 
 
 echo ABUS configure.bat finished.

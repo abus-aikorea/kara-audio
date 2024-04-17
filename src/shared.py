@@ -7,7 +7,9 @@ from pathlib import Path
 
 import yaml
 
-from src.logging_colors import logger
+# from src.logging_colors import logger
+import structlog
+logger = structlog.get_logger()
 
 # Model variables
 model = None
