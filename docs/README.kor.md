@@ -82,6 +82,12 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 ```
 
 ### step 2. 프로그램 설치 및 실행
+
+0. 설치전
+   - Windows Update 를 실행하여 시스템을 최신 상태로 업데이트 합니다.
+   - NVIDIA Graphic Driver 를 최신 상태로 업데이트 합니다.
+
+
 1. `configure.bat` 실행
    - Windows에 ffmpeg 과 CUDA(NVIDIA GPU를 사용하는 경우) 및 Windows SDK를 설치합니다. 
    - 설치를 위해서는 인터넷에 연결되어 있어야 하고, 컴퓨터 사양에 따라 1시간 이상 소요될 수 있습니다.
