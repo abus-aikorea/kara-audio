@@ -64,15 +64,15 @@ https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b
 
 ### step 1. Package preparation
 * A. Paid version
-    + Unzip the compressed file (**ai-cover-x.zip**) included in the USB to an appropriate location on your computer.
-    + Or, copy the already unzipped folder (**ai-cover-x**) to an appropriate location on your computer.
+    + Unzip the compressed file (**kara-audio-x.zip**) included in the USB to an appropriate location on your computer.
+    + Or, copy the already unzipped folder (**kara-audio-x**) to an appropriate location on your computer.
 
 * B. Free version
   + Download and unzip the latest release ( **Source code (zip)** ) from [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
   + Or, download source code with git clone
 
 ```bash
-git clone https://github.com/abus-aikorea/ai-cover.git
+git clone https://github.com/abus-aikorea/kara-audio.git
 ```
 
 ### step 2. How to install and run
