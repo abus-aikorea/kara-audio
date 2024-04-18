@@ -58,9 +58,9 @@ Kara-Audio is the new name of AI Studio. from 2024-04-10
 ## Running Environment
 * OS : Windows 10/11 (64bits) **※ Linux, Mac OS is not supported.**
 * CPU: Intel Processor 2GHz or faster (or equivalent compatible)
-* RAM: 4GB or greater
+* RAM: 16GB or more
 * HDD: At least 20GB of free space during installation
-* GPU: NVIDIA graphics card supporting CUDA 11.8 is recommended. VRAM 4GB or more.
+* GPU: NVIDIA graphics card supporting CUDA 11.8 is recommended. VRAM 6GB or more.
 * Internet connection required (installation)
 
 
@@ -116,7 +116,9 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 1. About Demixer
    - Facebook Research's Demucs models (htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra) all show good performance.
+   - Demucs runs quite well even on low-end PCs (8GB of RAM).
    - In MDX-Net, UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2, etc. show good performance.
+   - MDX-Net models only operate on high-end PCs (RAM 16GB or more).
    - Try using the models one by one and find one that suits your purpose.
    - We recommend using the latest NVIDIA GPU (VRAM 6GB or higher). Out-of-memory errors may occur if VRAM is insufficient.
 
@@ -124,7 +126,8 @@ git clone https://github.com/abus-aikorea/kara-audio.git
    - Large-V2 model is best. The rest have poor recognition rates.
    - If the audio language is 'Korean', it is best to set the Whisper language to 'Korean' as well.
    - When the audio language is 'Korean', if you set the Whisper language to 'Japanese', 'Japanese' will be output, but the accuracy will be low. (Google Translator is better.)
-
+   - The **Denoise** option removes noise using the MDX-Net model. Voice recognition results may improve. (Use only on high-end PC)
+   - 
 
 ## Caution!!
 When Windows Defender mistakenly recognizes a batch file as a Trojan, this is often called a 'False Positive'. To solve this problem, you can go through the following steps:

@@ -58,9 +58,9 @@ Kara-AudioはAI Studioの新しい名前です。from 2024-04-10
 ## 実行要件
 * OS : Windows 10/11 (64bits) **※ Linux, Mac OSには対応しておりません。**
 * CPU: Intelプロセッサ 2GHz以上(または同等の互換プロセッサ)
-* RAM: 4GB 以上
+* RAM: 16GB 以上
 * HDD: 20GB以上の空き容量(インストール時)
-* GPU: :CUDA 11.8に対応するNVIDIAグラフィックカードを推奨。VRAM 4GB以上。
+* GPU: :CUDA 11.8に対応するNVIDIAグラフィックカードを推奨。VRAM 6GB以上。
 * インターネット接続環境必須(インストール時)
 
 
@@ -117,7 +117,9 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 1. Demixerの使用
    - Facebook ResearchのDemucsモデル（htdemucs、htdemucs_6s、htdemucs_ft、mdx_extra）はすべて良いパフォーマンスを示しています。
+   - Demucsは低仕様PC（RAM 8GB）でも非常にうまく動作します。
    - MDX-Netでは、UVR-MDX-NET-Voc_FT、Kim_Vocal_2、UVR_MDXNET_KARA_2などが良いパフォーマンスを示しています。
+   - MDX-Netモデルは、高仕様PC（RAM 16GB以上）でのみ動作します。
    - モデルを一つずつ使ってみて、目的に合ったものを探してください。
    - NVIDIA 最新のGPU(6GB以上のVRAM)の使用を推奨します. VRAMが不足すると、Out-Of-Memoryエラーが発生する可能性があります。
 
@@ -125,6 +127,7 @@ git clone https://github.com/abus-aikorea/kara-audio.git
    - Large-V2モデルが最適です。残りは認識率が悪い。
    - オーディオの言語が「韓国語」の場合、Whisperの言語設定も「韓国語」にするのが最善です。
    - オーディオの言語が「韓国語」のとき、Whisperの言語設定を「日本語」にすると「日本語」を出力しますが、精度は低下します。 （むしろグーグル翻訳者は良いです。）
+   - **Denoise**オプションを使用すると、MDX-Netモデルを使用してノイズを除去します。音声認識結果が良くなることがあります。 （高仕様PCでのみお使いください）
 
 ## 注意事項
 Windows Defenderが誤ってバッチファイルをトロイの木馬として認識している場合、これはしばしば「False Positive」と呼ばれます。この問題を解決するには、次の手順を実行できます。

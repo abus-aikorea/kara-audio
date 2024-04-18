@@ -60,9 +60,9 @@ Kara-Audio는 AI Studio의 새이름입니다. from 2024-04-10
 ## 실행 환경
 * OS : Windows 10/11 (64bits) **※ Linux, Mac OS는 지원하지 않습니다.**
 * CPU: Intel 프로세서 2GHz 이상(또는 동급 호환)
-* RAM: 4GB 이상
+* RAM: 16GB 이상
 * HDD: 설치 중 최소 20GB의 여유 공간
-* GPU: CUDA 11.8을 지원하는 **NVIDIA** 그래픽 카드 권장. VRAM 4GB 이상.
+* GPU: CUDA 11.8을 지원하는 **NVIDIA** 그래픽 카드 권장. VRAM 6GB 이상.
 * 인터넷 연결 필요(설치시)
 
 
@@ -119,14 +119,17 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 ## 이용팁
 
 1. Demixer 사용
-   - Facebook Research 의 Demucs 모델(htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra)들은 모두 좋은 성능을 보여줍니다.
+   - Facebook Research 의 Demucs 모델(htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra)들은 모두 좋은 성능을 보여줍니다. 
+   - Demucs 는 저사양 PC (RAM 8GB)에서도 그럭저럭 잘 동작합니다.
    - MDX-Net에서는 UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2 등이 좋은 성능을 보여줍니다.
+   - MDX-Net 모델은 고사양 PC (RAM 16GB 이상)에서만 동작합니다.
    - 모델들을 하나씩 사용해 보고, 목적에 맞는 것을 찾으시길 바랍니다.
    - NVIDIA 최신 GPU (VRAM 6GB 이상) 사용을 권장합니다. VRAM 부족시 Out-Of-Memory 에러가 발생할 수 있습니다.
 2. Whisper 사용
    - Large-V2 모델이 가장 좋습니다. 나머지는 인식률이 나쁩니다.
    - 오디오의 언어가 '한국어'인 경우, Whisper 언어 설정도 '한국어'로 하는 것이 가장 좋습니다.
    - 오디오의 언어가 '한국어'일 때, Whisper 언어 설정을 '일본어'로 하면 '일본어' 를 출력하긴 합니다만, 정확도는 떨어집니다. (차라리 구글 번역기가 낫습니다.)
+   - **Denoise** 옵션을 사용하면 MDX-Net 모델을 이용하여 노이즈를 제거합니다. 음성 인식 결과가 좋아 질 수 있습니다. (고사양 PC에서만 사용하세요)
 
 
 ## 주의사항
