@@ -47,7 +47,8 @@ if not "!value!"=="" (
 if !IS_NVIDIA_GPU! equ 1 (
     echo NVIDIA or TESLA GPU is found
     echo.
-    choco install -y cuda --version=11.8.0.52206
+    @REM choco install -y cuda --version=11.8.0.52206
+    choco install -y cuda --version=12.3.2.546
 ) else (
     echo NVIDIA or TESLA GPU is not found
     echo.

@@ -60,7 +60,7 @@ Kara-AudioはAI Studioの新しい名前です。from 2024-04-10
 * CPU: Intelプロセッサ 2GHz以上(または同等の互換プロセッサ)
 * RAM: 16GB 以上
 * HDD: 20GB以上の空き容量(インストール時)
-* GPU: :CUDA 11.8に対応するNVIDIAグラフィックカードを推奨。VRAM 6GB以上。
+* GPU: :CUDA 12.3に対応するNVIDIAグラフィックカードを推奨。VRAM 6GB以上。
 * インターネット接続環境必須(インストール時)
 
 

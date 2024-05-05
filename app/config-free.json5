@@ -58,7 +58,7 @@
     // The host or IP to bind to. If None, bind to localhost.
     "server_name": null,
     // The port to bind to.
-    "server_port": 7894,
+    "server_port": 7892,
     // The number of workers to use for the web server. Use -1 to disable queueing.
     "queue_concurrency_count": 4,
     // Whether or not to automatically delete all uploaded files, to save disk space

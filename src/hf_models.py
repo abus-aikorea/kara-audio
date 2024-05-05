@@ -31,10 +31,9 @@ class HF_Model():
     
     def has_local_file(self):
         file_path = os.path.join(app_model_path, self.file_type, self.file_name)
-        logger.debug(f'has_local_file: {file_path}')    
         if os.path.exists(file_path):
             if os.path.getsize(file_path) == self.file_size:
-                logger.debug(f'has_local_file: OK')    
+                logger.debug(f'has_local_file - OK : {file_path}')    
                 return True
         return False
     
@@ -49,7 +48,7 @@ class HF_Model():
 
             download_file_path = os.path.join(download_folder, self.file_name)
             shutil.copy(hf_download_path, download_file_path)
-            logger.debug(f'download to: {download_file_path}')    
+            logger.debug(f'download : {download_file_path}')    
             
             _, extension = os.path.splitext(download_file_path)
             if extension.lower() == '.zip':
@@ -116,7 +115,7 @@ HF_MODELS = [
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Inst_HQ_4.onnx', 59074342, 1, 'UVR-MDX-NET Inst HQ 4'),
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'UVR-MDX-NET-Voc_FT.onnx', 66762490, 0),      # level 0
     HF_Model('ABUS-AI/AICover-v0.1', 'mdxnet-model', 'Reverb_HQ_By_FoxJoy.onnx', 66780123, 0, 'Reverb HQ (FoxJoy)'),   # level 0    
-    HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '955717e8-8726e21a.th', 84141911, 1, 'htdemucs'),
+    HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '955717e8-8726e21a.th', 84141911, 0, 'htdemucs'),        # level 0
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '5c90dfd2-34c22ccb.th', 54996327, 1, 'htdemucs_6s'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'htdemucs_ft.zip', 311843957, 1, 'htdemucs_ft'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'mdx_extra.zip', 579915263, 1, 'mdx_extra'),        

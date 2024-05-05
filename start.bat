@@ -105,7 +105,7 @@ call "%CONDA_ROOT_PREFIX%\condabin\conda.bat" activate "%INSTALL_ENV_DIR%" || ( 
 echo Miniconda location: %CONDA_ROOT_PREFIX%
 cd /D "%~dp0"
 if "%abus_genuine_installed%" == "F" (
-	call python -m pip install cryptography
+	@REM call python -m pip install cryptography
 	call python -m pip install huggingface-hub==0.17.3
 )
 

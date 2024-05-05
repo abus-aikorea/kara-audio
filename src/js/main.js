@@ -464,3 +464,4 @@ function handleVisibilityChange(isVisible) {
 }
 
 respondToRenameVisibility(renameTextArea, handleVisibilityChange);
+
