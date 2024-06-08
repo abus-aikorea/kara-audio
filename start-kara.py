@@ -10,7 +10,7 @@ sys.path.append(parent_dir)
 
 from src.config import ApplicationConfig, UserConfig
 from src.hf_models import hf_download_models
-from app.abus_genuine_free import genuine_init, genuine_is_paid
+from app.abus_genuine import genuine_init, genuine_is_paid
 from app.abus_app_kara import create_ui
 
 
