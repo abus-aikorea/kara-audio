@@ -12,9 +12,10 @@
     "Audio Format": "Audio Format",
     "Whisper Model": "Whisper Model",
     "Audio Language": "Audio Language",
-    "Translated Language": "Translated Language",    
+    "Translated Language": "Translated Language",
+    "Source Language": "Source Language",     
     "Highlight Words": "Highlight Words",
-    "Clear": "Clear",
+    "🧹Clear": "🧹Clear",
     "Submit": "Submit",
     "Karaoke Mode": "Karaoke Mode",
     "Original": "Original",
@@ -90,7 +91,10 @@
     "AI Transcription" : "AI Transcription",
     "Live Translations" : "Live Translations",
     "Live Transcriptions" : "Live Transcriptions",
-    "Expiration date" : "Expiration date"
+    "Expiration date" : "Expiration date",
+    "Start" : "Start",
+    "Stop" : "Stop",
+    "Select folder" : "Select folder"
 
 
 }

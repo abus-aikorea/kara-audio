@@ -12,9 +12,10 @@
     "Audio Format": "오디오 포맷",
     "Whisper Model": "Whisper 모델",
     "Audio Language": "오디오 언어",
-    "Translated Language": "번역어",        
+    "Translated Language": "번역어",
+    "Source Language": "출발 언어",            
     "Highlight Words": "Highlight Words",
-    "Clear": "클리어",
+    "🧹Clear": "🧹클리어",
     "Submit": "전송",
     "Karaoke Mode": "노래방 모드",
     "Original": "원본",
@@ -91,6 +92,9 @@
     "AI Transcription" : "AI음성인식",
     "Live Translations" : "실시간 번역",
     "Live Transcriptions" : "실시간 자막",
-    "Expiration date" : "이용 기한"    
+    "Expiration date" : "이용 기한",
+    "Start" : "시작",
+    "Stop" : "중지",
+    "Select folder" : "폴더 선택"    
 
 }

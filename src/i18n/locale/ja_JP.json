@@ -12,9 +12,10 @@
     "Audio Format": "オーディオ形式",
     "Whisper Model": "Whisperモデル",
     "Audio Language": "オーディオ言語",
-    "Translated Language": "翻訳語",    
+    "Translated Language": "翻訳語", 
+    "Source Language": "入力言語",    
     "Highlight Words": "単語を強調",
-    "Clear": "クリア",
+    "🧹Clear": "🧹クリア",
     "Submit": "送信",
     "Karaoke Mode": "カラオケモード",
     "Original": "オリジナ",
@@ -91,6 +92,9 @@
     "AI Transcription" : "AI文字起こし",
     "Live Translations" : "ライブ翻訳",
     "Live Transcriptions" : "ライブ文字起こし",
-    "Expiration date" : "有効期限"
+    "Expiration date" : "有効期限",
+    "Start" : "始める",
+    "Stop" : "停止",
+    "Select folder" : "フォルダの選択"
 
 }
