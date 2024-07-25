@@ -1,0 +1,45 @@
+structlog
+# for Whisper
+openai-whisper==20231117
+faster-whisper==1.0.3
+ffmpeg-python==0.2.0
+# for Demucs
+demucs==4.0.1
+soundfile
+scipy
+invisible-watermark
+fonts
+font-roboto
+# gradio
+# gradio==3.50.2
+gradio==4.29.0
+yt-dlp==2023.11.16
+json5
+more_itertools
+pyyaml
+pandas==1.5.0
+Cython
+huggingface-hub==0.23.4
+# one-click
+tqdm
+markdown
+rich
+# mdx
+librosa==0.9.1
+onnxruntime-gpu==1.17.1
+# tts
+edge-tts
+python-iso639
+deep-translator
+pysubs2
+jiwer
+evaluate
+uuid
+lingua-language-detector
+# PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.3.1+cu121
+--extra-index-url https://download.pytorch.org/whl/cu121
+torchvision==0.18.1+cu121
+--extra-index-url https://download.pytorch.org/whl/cu121
+torchaudio==2.3.1+cu121

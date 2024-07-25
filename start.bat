@@ -40,6 +40,13 @@ set MINICONDA_DOWNLOAD_URL=https://repo.anaconda.com/miniconda/Miniconda3-py39_2
 set MINICONDA_CHECKSUM=6128825cdcde8ec0c0a5a9ed3dc021cc920040905dee39e58e827bc27fea0bee
 set conda_exists=F
 
+
+:: ABUS miniconda fo python 3.10
+@REM set MINICONDA_DOWNLOAD_URL=https://repo.anaconda.com/miniconda/Miniconda3-py310_24.5.0-0-Windows-x86_64.exe
+@REM set MINICONDA_CHECKSUM=978114c55284286957be2341ad0090eb5287222183e895bab437c4d1041a0284
+@REM set conda_exists=F
+
+
 :: figure out whether git and conda needs to be installed
 call "%CONDA_ROOT_PREFIX%\_conda.exe" --version >nul 2>&1
 if "%ERRORLEVEL%" EQU "0" set conda_exists=T
@@ -76,14 +83,22 @@ if "%conda_exists%" == "F" (
 	del "%INSTALL_DIR%\miniconda_installer.exe"
 )
 
-:: ABUS python 3.9
-:: create the installer env
+:: ABUS python 3.9 - create the installer env
 set abus_genuine_installed=T
 if not exist "%INSTALL_ENV_DIR%" (
 	set abus_genuine_installed=F
 	echo Packages to install: %PACKAGES_TO_INSTALL%
 	call "%CONDA_ROOT_PREFIX%\_conda.exe" create --no-shortcuts -y -k --prefix "%INSTALL_ENV_DIR%" python=3.9 || ( echo. && echo Conda environment creation failed. && goto end )
 )
+
+:: ABUS python 3.10 - create the installer env
+@REM set abus_genuine_installed=T
+@REM if not exist "%INSTALL_ENV_DIR%" (
+@REM 	set abus_genuine_installed=F
+@REM 	echo Packages to install: %PACKAGES_TO_INSTALL%
+@REM 	call "%CONDA_ROOT_PREFIX%\_conda.exe" create --no-shortcuts -y -k --prefix "%INSTALL_ENV_DIR%" python=3.10 || ( echo. && echo Conda environment creation failed. && goto end )
+@REM )
+
 
 
 :: check if conda environment was actually created
@@ -105,11 +120,11 @@ call "%CONDA_ROOT_PREFIX%\condabin\conda.bat" activate "%INSTALL_ENV_DIR%" || ( 
 echo Miniconda location: %CONDA_ROOT_PREFIX%
 cd /D "%~dp0"
 if "%abus_genuine_installed%" == "F" (
-	call python -m pip install huggingface-hub==0.17.3
+	call python -m pip install huggingface-hub==0.23.4
 )
 
 set LOG_LEVEL=DEBUG
-call python start-abus.py %*
+call python start-abus.py kara
 
 :: below are functions for the script   next line skips these during normal execution
 goto end

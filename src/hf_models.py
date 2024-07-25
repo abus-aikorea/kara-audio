@@ -39,6 +39,7 @@ class HF_Model():
     
     def download(self):
         try:
+            logger.warning(f'start download : {self.file_name}')            
             cache_dir = os.path.join(Path.home(), ".cache", "huggingface", "hub")
             hf_download_path = hf_hub_download(repo_id=self.repo_id, filename=self.file_name, cache_dir=cache_dir)
             
@@ -48,11 +49,11 @@ class HF_Model():
 
             download_file_path = os.path.join(download_folder, self.file_name)
             shutil.copy(hf_download_path, download_file_path)
-            logger.debug(f'download : {download_file_path}')    
+            logger.warning(f'download complete : {download_file_path}')    
             
             _, extension = os.path.splitext(download_file_path)
             if extension.lower() == '.zip':
-                self.unzip(make_folder=(self.file_type=='voice-model'))
+                self.unzip(make_folder=(self.file_type=='rvc-voice'))
             return True
         except:
             return False   
@@ -119,8 +120,8 @@ HF_MODELS = [
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', '5c90dfd2-34c22ccb.th', 54996327, 1, 'htdemucs_6s'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'htdemucs_ft.zip', 311843957, 1, 'htdemucs_ft'),
     HF_Model('ABUS-AI/AICover-v0.1', 'demucs', 'mdx_extra.zip', 579915263, 1, 'mdx_extra'),        
-    HF_Model('phant0m4r/LiSA', 'voice-model', 'LiSA.zip', 263711433, 0),        # level 0
-    HF_Model('pjesek/AdoRVCv2', 'voice-model', 'AdoRVCv2.zip', 330871899, 0),   # level 0
+    HF_Model('phant0m4r/LiSA', 'rvc-voice', 'LiSA.zip', 263711433, 0),        # level 0
+    HF_Model('pjesek/AdoRVCv2', 'rvc-voice', 'AdoRVCv2.zip', 330871899, 0),   # level 0
 ]
 
 

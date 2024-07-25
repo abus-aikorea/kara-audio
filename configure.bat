@@ -54,6 +54,7 @@ if !IS_NVIDIA_GPU! equ 1 (
     echo.
 )
 
+choco install -y git.install
 choco install -y ffmpeg
 choco install -y visualstudio2022buildtools --verbose
 choco install -y visualstudio2022-workload-vctools --verbose

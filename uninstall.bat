@@ -34,6 +34,7 @@ if errorlevel 2 (
     echo Start Uninstallation. 
 
     :: Uninstall packages
+    choco uninstall -y git.install
     choco uninstall -y ffmpeg
     @REM choco uninstall -y cuda --version=11.8.0.52206
     @REM choco uninstall -y cuda --version=12.3.2.546

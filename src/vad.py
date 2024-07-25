@@ -46,7 +46,7 @@ class VoiceActivityDetection():
             raise ValueError(f"Supported sampling rates: {self.sample_rates} (or multiply of 16000)")
 
         if sr / x.shape[1] > 31.25:
-            raise ValueError("Input audio chunk is too short")
+            raise ValueError(f"Input audio chunk is too short dim={x.dim()}, shape={x.shape}")
 
         return x, sr
 
