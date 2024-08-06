@@ -2,6 +2,7 @@ structlog
 # for Whisper
 openai-whisper==20231117
 faster-whisper==1.0.3
+whisper-timestamped==1.15.4
 ffmpeg-python==0.2.0
 # for Demucs
 demucs==4.0.1
