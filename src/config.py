@@ -16,6 +16,7 @@ class UserConfig:
     def __init__(self, user_config_path):
         self.user_config_path = user_config_path
         self.default_user_config = {
+            "whisper_core": "openai",
             "gradio_language": "Korean",
             "whisper_model_name": "medium",            
             "whisper_language": "korean",
@@ -52,11 +53,11 @@ class UserConfig:
             "xtts_rate": 1,
             "xtts_volume": 1,
             "xtts_pitch": 0,
-            "etts_language": "English",
-            "etts_voice": "UNITED STATES-Ana-Female",
-            "etts_pitch": 0,
-            "etts_rate": 0,
-            "etts_volume": 0,
+            "tts_language": "English",
+            "tts_voice": "UNITED STATES-Ana-Female",
+            "tts_pitch": 0,
+            "tts_rate": 0,
+            "tts_volume": 0,
             "rvc_voice": "choi",
             "rvc_f0_up_key": 0,
             "rvc_filter_radius": 3,
