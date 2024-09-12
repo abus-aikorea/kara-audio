@@ -177,5 +177,7 @@ app/model/rvc/base/rmvpe.pt
 *.th
 /model/faster-whisper
 /model/faster-whisper
-requirements-gpu.txt
 requirements-cpu.txt
+requirements-gpu.txt
+temp_requirements.txt
+
