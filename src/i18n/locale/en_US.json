@@ -105,7 +105,7 @@
     "Output Video": "Output Video",
     "Translated captions": "Translated captions",
     "Translation": "Translation", 
-    "Voice generator": "Voice generator",
+    "Speech Generation": "Speech Generation",
     "Voice": "Voice",
     "Read aloud": "Read aloud",
     "Deep Voice": "Deep Voice",
@@ -113,16 +113,18 @@
     "Language": "Language", 
     "Clone": "Clone",
     "Upload subtitle": "Upload subtitle",
-    "Supported formats": "Supported formats",
-    "Source text": "Source text",
-    "Target text": "Target text",
-    "Enter text directly": "Enter text directly",
+    "Formats": "Formats",
+    "Source Text": "Source Text",
+    "Target Text": "Target Text",
+    "You can enter text directly": "You can enter text directly",
     "Synthesized voice": "Synthesized voice",
     "Select media language": "Select media language",
     "float - quality first, int - speed first": "float - quality first, int - speed first",
     "Output files": "Output files",
     "Primary Stem": "Primary Stem",
-    "Secondary Stem": "Secondary Stem"
-
+    "Secondary Stem": "Secondary Stem",
+    "Synthesis": "Synthesis",
+    "Using the free API": "Using the free API",
+    "Using Azure": "Using Azure"
 
 }
