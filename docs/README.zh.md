@@ -130,16 +130,19 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 
 ## 联系我们
 * 电子邮件：<abus.aikorea@gmail.com>
-* 主页（韩语）：<https://slashpage.com/abus>
+* 主页（韩语）：<https://abuskorea.imweb.me>
+* Amazon(USA): <https://www.amazon.com/dp/B0CTQQDPXT>
+* Amazon(Japan): <https://www.amazon.co.jp/dp/B0CTHT2JH3>
+* Amazon(Singapore): <https://www.amazon.sg/dp/B0DCGKMMG3>
+* Amazon(UAE): <https://www.amazon.ae/dp/B0DCGQ1FGC>
 * 네이버 스마트스토어（韩语）：<https://smartstore.naver.com/abus/category/ALL?cp=1>
-* Coupang（韩语）：<https://www.coupang.com/vp/products/7875503674>
-* Amazon（美国）：<https://www.amazon.com/dp/B0CTQQDPXT>
-* Amazon（日本）：<https://www.amazon.co.jp/dp/B0CTHT2JH3>
+
 
 ## YouTube
-* 产品信息：<https://youtu.be/heEN4UIQLjc>
-* 自动字幕∙翻译：<https://youtu.be/uQ14hoEiI4c?si=Io9K_vIDYyeu9Z8_>
-* 家庭卡拉OK：<https://youtube.com/playlist?list=PLwx5dnMDVC9bVxfGo58U-R-w3fUHqwiD6&si=TZBh5AFjcr7_dyiI>
+* 产品信息：<https://youtube.com/playlist?list=PLwx5dnMDVC9Y7dAjm9r26CZUw1uU5VIeq&si=873MgzUtu4POE9jO>
+* 家庭卡拉OK(Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9bVxfGo58U-R-w3fUHqwiD6&si=aWRDfF8TxFp2oAR0>
+* 家庭卡拉OK(K-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9Z8kB01tQKfzTysaCCxC3C8&si=1_-9p722rd_JXpzv>
+* 家庭卡拉OK(J-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9apyxrP9LE9PiT821G7lJXk&si=0a474CP7ZIjMoGN9>
 
 ## 鸣谢
 * UVR5：<https://github.com/Anjok07/ultimatevocalremovergui>
