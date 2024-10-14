@@ -10,7 +10,8 @@
 
 ### 运行示例
 
-[这里会显示一个视频演示，但在文本翻译中无法直接嵌入]
+https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38
+
 
 ## 简介
 Kara-Audio是AI Studio的新名称。自2024-04-10起。
