@@ -1,134 +1,135 @@
-# Kara-Audio
+# Kara-Audio: The best Whisper Web UI for subtitle production.
 
 🌍 [한국어](README.kor.md) ∙ [English](README.eng.md) ∙ [中文简体](README.zh.md) ∙ [中文繁體](README.tw.md) ∙ [日本語](README.jpn.md)
 
 [![GitHub License](https://img.shields.io/github/license/abus-aikorea/kara-audio)](LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
 
-The best gradio web-ui for vocal remover that uses demucs and mdx-net. 
-Automatic subtitle creation using faster whisper. Easy one click installation. Fully portable.
 
-### Running example
+**Kara-Audio is The best Whisper Web UI for subtitle production.** It can be easily installed with one click. Create a virtual environment using Miniconda, running completely separate from the Windows system (fully portable).
+
+- **YouTube Downloader**: You can download YouTube videos and extract the audio (mp3, wav, flac).
+- **Vocal Remover**: Use MDX-Net supported in UVR5 and the Demucs engine developed by Meta for voice separation.
+- **STT**: Supports speech-to-text conversion with Whisper, Faster-Whisper, and whisper-timestamped.
+- more...
+
+Kara-Audio turns YouTube videos into your own karaoke music videos.
+You can create transcripts, meeting minutes, as well as subtitles for movies, dramas, and news.
+
+
+
+### 🚄 Run screen
 
 https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38
 
 
+## ⭐ Key Features
 
-## Introduction
-Kara-Audio is the new name of AI Studio. from 2024-04-10
-
-* Kara-Audio turns YouTube videos into your own **karaoke music videos**.
-* You can create **transcripts**, **meeting minutes**, as well as **subtitles** for movies, dramas, and news.
-* It is equipped with **Vocal Remover** provided by UVR5 and **Automatic Subtitles** function using OpenAI Whisper.
-* Kara-Audio can be easily installed with **one click** and provides Gradio Web-UI.
-
-
-
-# main function
-
-  * `Kara Audio` Tab
-      - YouTube downloader, vocal removal, automatic subtitle integrated environment
+* `Kara Audio` Tab
+  - YouTube downloader, vocal removal, automatic subtitle integrated environment
 
 <p align="center">
-  <img style="width: 90%; height: 90%" src="images/main_page.eng.png?raw=true" alt=""/>
+<img style="width: 90%; height: 90%" src="images/main_page.eng.png?raw=true" alt=""/>
 </p>  
 
-  * `Demixing` Tab
-    - Vocal separation, Reverb/Echo removal
-    - MDX-Net, Demucs model support
-    - Supports 3 audio outputs (wav, flac, mp3)
+* `Demixing` Tab
+  - Vocal separation, Reverb/Echo removal
+  - MDX-Net, Demucs model support
+  - Supports 3 audio outputs (wav, flac, mp3)
 
-  * `Subtitle` Tab
-    - Voice recognition, Automatic subtitles (srt, vtt, txt)
-    - Supports over 90 languages (English, Japanese, French, German, Chinese, 한국어)
-
-
-
-## Key-Features
-* You can download YouTube videos (mp4, webm) and save them as audio files (mp3, wav, flac).
-* We provide vocal remover. Uses **MDX-Net** and **Demucs**.
-* Automatic subtitle creation is possible through AI voice recognition. It uses OpenAI’s high-performance voice recognition engine, **Whisper**.
-* Whisper supports over 90 languages, including Japanese, Korean, English, Chinese, French, and Spanish.
-* **One-click installation**. Once installed, you can use it **permanently** at no additional cost. (※ Free version has **30 minute limit** on usage time)
-* Provides **Web-UI**. Google Chrome browser is recommended.
+* `Subtitle` Tab
+  - Voice recognition, Automatic subtitles (srt, vtt, txt)
+  - Supports over 90 languages (English, Japanese, French, German, Chinese, 한국어)
 
 
-## Running Environment
-* OS : Windows 10/11 (64bits) **※ Linux, Mac OS is not supported.**
-* CPU: Intel Processor 2GHz or faster (or equivalent compatible)
-* RAM: 16GB or greater
+## 💻 Execution environment
+* OS: Windows 10/11 (64bits) **※ Linux and Mac OS are not supported.**
+* GPU: **NVIDIA** graphics card supporting CUDA 12.1 recommended. 
+* VRAM: 4GB or more. 8GB or more recommended.
+* RAM: 4GB or more
 * HDD: At least 20GB of free space during installation
-* GPU: NVIDIA graphics card supporting CUDA 12.3 is recommended. VRAM 6GB or more.
-* Internet connection required (installation)
+* Internet connection required (installation and translation work)
 
 
-## Installing and running
+
+## 📀 Installation
+
+Kara-Audio can be easily installed with one click. Just run 🚀**configure.bat** and 🚀**start.bat**
+
 
 ### step 1. Package preparation
 * A. Paid version
     + Unzip the compressed file (**kara-audio-x.zip**) included in the USB to an appropriate location on your computer.
     + Or, copy the already unzipped folder (**kara-audio-x**) to an appropriate location on your computer.
-
 * B. Free version
-  + Download and unzip the latest release ( **Source code (zip)** ) from [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
-  + Or, download source code with git clone
+  + Clone or download the latest release (**Source code (zip)**) from  [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/)
+  
 
-```bash
-git clone https://github.com/abus-aikorea/kara-audio.git
-```
+### step 2. Install and run the program
+1. 🚀 Run `configure.bat`
+   - Install git, ffmpeg and CUDA (if using NVIDIA GPU) on Windows. 
+   - You only need to run it the first time.
+   - An internet connection is required, and it may take over an hour depending on the system.
+   - Never close the Windows-Command window during installation.
+2. 🚀 Run `start.bat`
+   - Start Kara-Audio. Web-UI will run automatically. 
+   - When running for the first time, Kara-Audio is installed first. 
+   - An internet connection is required, and it may take over an hour depending on the system. 
+   - Never close the Windows-Command window during installation.
+   - If a problem occurs during installation, delete the **installer_files** folder and run start.bat again.
 
-### step 2. How to install and run
-
-
-0. Before installation
-   - Run Windows Update to update the system to the latest status.
-   - Update the NVIDIA Graphic Driver to the latest status.
-
-1. Run `configure.bat`
-     * Install ffmpeg and CUDA (if using an NVIDIA GPU) and the Windows SDK on Windows.
-     * Installation requires an Internet connection and may take more than an hour depending on your computer specifications.
-     * Never close the Windows-Command window during installation. (If the operation appears to have stopped, press the space bar occasionally)
-     * If an error occurs during installation, we recommend running uninstall.bat and starting again from the beginning.
-     * configure.bat only needs to be run once.
-
-2. Run `start.bat`
-     * Start Kara-Audio. Web-UI will run automatically.
-     * When running for the first time, install Kara-Audio first.
-     * Installation requires an Internet connection and may take more than an hour depending on your computer specifications.
-     * Never close the Windows-Command window during installation. (If the operation appears to have stopped, press the space bar occasionally)
-     * If an error occurs during installation, delete the installer_files folder and run start.bat again.
-
-    #### When the browser does not run automatically
-     * Close the Windows-Commnad window and run start.bat again or
-     * Run the browser directly and enter the address displayed in the Windows-Command window (e.g. **http://127.0.0.1:7894** ) into the address bar.
+### step 3. Uninstall program
+* Run `uninstall.bat`:
+  - Remove the **installer_files** folder.
+  - Remove ffmepg, git and CUDA packages installed on Windows (if selected)
+* Kara-Audio has **portable** installation as standard. To uninstall the program, deleting the installation folder is sufficient.
 
 
-### step 3. How to uninstall
-* Run `uninstall.bat`
-  * Remove installer_files . 
-  * Remove the ffmepg, CUDA packages and Windows SDK installed on Windows (if selected)
 
-* Kara-Audio has a **portable** installation as standard. To uninstall the program, deleting the installation folder is sufficient.
+## ❓Tips & Tricks
+
+#### If Browser does not run automatically
+- Close the Windows-Commnad window and run start.bat again.
+- Run the browser directly and enter the address displayed in the Windows-Command window (e.g. **http://127.0.0.1:7892**) in the address bar.
+
+#### If a CUDA Out-Of-Memory error occurs
+- Check the GPU memory status in Windows Task Manager - Performance tab. 
+- Set the Denoise level to 0 or 1. Denoise level 2 requires at least 8GB of GPU memory.
+- Set Compute Type to int type. The float type has better quality, but requires more GPU memory.
+
+#### How to improve the quality of subtitles?
+- The quality of subtitles tends to improve with larger Whisper models, but this is not necessarily the case. large > medium > small > base > tiny 
+- Among compute types, float type has good performance. The int type is a model that reduces GPU usage and increases speed through model quantization. On the other hand, performance decreases. 
+- If you increase the denoise level, more background sounds will be removed, and only the remaining voice will be used for voice recognition. It does not always guarantee good results.
+  
+
+#### About Demixer
+- Facebook Research's Demucs models (htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra) all show good performance.
+- Demucs runs quite well even on low-end PCs (8GB of RAM).
+- In MDX-Net, UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2, etc. show good performance.
+- MDX-Net models only operate on high-end PCs (RAM 16GB or more).
+- Try using the models one by one and find one that suits your purpose.
+- We recommend using the latest NVIDIA GPU (VRAM 6GB or higher). Out-of-memory errors may occur if VRAM is insufficient.
+
+#### About Whisper
+- Large-V2 model is best. The rest have poor recognition rates.
+- If the audio language is 'Korean', it is best to set the Whisper language to 'Korean' as well.
+- When the audio language is 'Korean', if you set the Whisper language to 'Japanese', 'Japanese' will be output, but the accuracy will be low. (Google Translator is better.)
+- The **Denoise** option removes noise using the MDX-Net model. Voice recognition results may improve. (Use only on high-end PC)
 
 
-## Tips for use
 
-1. About Demixer
-   - Facebook Research's Demucs models (htdemucs, htdemucs_6s, htdemucs_ft, mdx_extra) all show good performance.
-   - Demucs runs quite well even on low-end PCs (8GB of RAM).
-   - In MDX-Net, UVR-MDX-NET-Voc_FT, Kim_Vocal_2, UVR_MDXNET_KARA_2, etc. show good performance.
-   - MDX-Net models only operate on high-end PCs (RAM 16GB or more).
-   - Try using the models one by one and find one that suits your purpose.
-   - We recommend using the latest NVIDIA GPU (VRAM 6GB or higher). Out-of-memory errors may occur if VRAM is insufficient.
+## 📢 caution
 
-2. About Whisper
-   - Large-V2 model is best. The rest have poor recognition rates.
-   - If the audio language is 'Korean', it is best to set the Whisper language to 'Korean' as well.
-   - When the audio language is 'Korean', if you set the Whisper language to 'Japanese', 'Japanese' will be output, but the accuracy will be low. (Google Translator is better.)
-   - The **Denoise** option removes noise using the MDX-Net model. Voice recognition results may improve. (Use only on high-end PC)
+Windows Defender may give a warning about untrusted application and disallow further execution of Kara-Audio.
+If SmartScreen security level is set to "Warn", just click "More info" and then click "Run anyway". 
+If SmartScreen is set to level "Block" there will be no button to run the installation. In this case, open the properties of the start.bat file, and check "Unblock", apply the change and run the start.bat again.
+
+<p align="center">
+  <img style="width: 60%; height: 60%" src="images/windows_smartscreen_warning.png?raw=true" alt=""/>
+</p>  
 
 
-## caution
 When Windows Defender mistakenly recognizes a batch file as a Trojan, this is often called a 'False Positive'. To solve this problem, you can go through the following steps:
 
 1. File exception handling: In Windows Defender, you can set certain files or processes to skip security scanning. To do this, follow the steps below:
@@ -142,7 +143,7 @@ When Windows Defender mistakenly recognizes a batch file as a Trojan, this is of
 3. Report the problem to anti-virus software: If you are sure that the file is not a Trojan horse, you can report it to Microsoft as a False Positive. Microsoft will review this and take any necessary action.
 
 
-## Contact us
+## 📬 Contact us
 * e-mail: <abus.aikorea@gmail.com>
 * homepage(Korean): <https://abuskorea.imweb.me>
 * Amazon(USA): <https://www.amazon.com/dp/B0CTQQDPXT>
@@ -153,14 +154,14 @@ When Windows Defender mistakenly recognizes a batch file as a Trojan, this is of
 
 
 
-## YouTube
+## 👍 YouTube
 * Product Information: <https://youtube.com/playlist?list=PLwx5dnMDVC9Y7dAjm9r26CZUw1uU5VIeq&si=873MgzUtu4POE9jO>
 * Home Karaoke (Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9bVxfGo58U-R-w3fUHqwiD6&si=aWRDfF8TxFp2oAR0>
 * Home Karaoke (K-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9Z8kB01tQKfzTysaCCxC3C8&si=1_-9p722rd_JXpzv>
 * Home Karaoke (J-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9apyxrP9LE9PiT821G7lJXk&si=0a474CP7ZIjMoGN9>
   
 
-## Credits
+## 🙏 Credits
 * UVR5: <https://github.com/Anjok07/ultimatevocalremovergui>
 * FacebookResearch Demucs: <https://github.com/facebookresearch/demucs>
 * OpenAI Whisper: <https://github.com/openai/whisper>
@@ -169,5 +170,7 @@ When Windows Defender mistakenly recognizes a batch file as a Trojan, this is of
 * gradio: <https://github.com/gradio-app/gradio>
 
 
-## Copyright
-<img src="images/ABUS-logo.jpg" width="100" height="100"> by [ABUS](https://slashpage.com/abus)
+
+## ©️ Copyright
+  <img src="images/ABUS-logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
+

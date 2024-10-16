@@ -1,4 +1,4 @@
-# Kara-Audio
+# Kara-Audio: The best Whisper Web UI for subtitle production.
 
 🌍 [한국어](README.kor.md) ∙ [English](README.eng.md) ∙ [中文简体](README.zh.md) ∙ [中文繁體](README.tw.md) ∙ [日本語](README.jpn.md)
 
@@ -6,25 +6,24 @@
 [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases)
 
 
-The best gradio web-ui for vocal remover that uses demucs and mdx-net. Automatic subtitle creation using faster whisper. Easy one click installation. Fully portable.
+**Kara-Audioは字幕制作のための最高のWhisper Web UIです。** ワンクリックで簡単にインストールできます。Minicondaを使用して仮想環境を作成し、Windowsシステムとは完全に独立して動作します（完全にポータブル）。
+
+- **YouTubeダウンローダー**: YouTube動画をダウンロードし、音声（mp3、wav、flac）を抽出できます。
+- **ボーカルリムーバー**: UVR5でサポートされているMDX-Netと、Metaによって開発されたDemucsエンジンを使用して声を分離します。
+- **STT**: Whisper、Faster-Whisper、およびwhisper-timestampedによる音声からテキストへの変換をサポートします。
+- もっと...
+
+Kara-AudioはYouTube動画を自分のカラオケミュージックビデオに変えます。
+映画、ドラマ、ニュースのトランスクリプト、議事録、字幕を作成できます。
 
 
-### 実行画面
+### 🚄 実行画面
 
 https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9558-921dc72295ef
 
 
 
-## はじめに
-Kara-AudioはAI Studioの新しい名前です。from 2024-04-10
-
-* Kara-AudioはYouTubeの動画をあなただけの**カラオケムービー**にしています。
-* **録音録**、**会議録**はもちろん、映画、ドラマ、ニュースの**字幕**を作ることができます。
-* UVR5が提供する**ボーカルリムーバー**とOpenAI Whisperを利用した**自動字幕**機能を搭載しています。
-* Kara-Audioは**ワンクリック**で簡単にインストールでき、Gradio Web-UIを提供します。
-
-
-## 主な機能
+## ⭐ 主な機能
 
 * `スタジオ` タブ
   - YouTubeダウンローダ、ボーカル削除、自動字幕統合環境
@@ -45,65 +44,44 @@ Kara-AudioはAI Studioの新しい名前です。from 2024-04-10
 
 
 
-## 特徴
-* YouTubeビデオのダウンロードには**yt-dlp**を使用してください。
-* YouTube動画（mp4、webm）をダウンロードし、オーディオファイル（mp3、wav、flac）として保存することもできます。
-* Facebook Researchの音源分離(music source separation)システムのDemucsを提供します。
-* OpenAIの高性能文字起こしAI「Whisper」を提供します。
-* 一度設置すれば、追加費用なしで**永続的**に使用することができます。 ( ※ Free版は利用時間**30分制限**あり)
-* **Gradio Web-UI**を提供します。 Google Chrome ブラウザをお勧めします。
-* 日本語、韓国語、英語、中国語、フランス語、スペイン語など90余りの言語に対応しています。
+## 💻 実行環境
+* OS: Windows 10/11（64ビット）**※ LinuxとMac OSはサポートされていません。**
+* GPU: CUDA 12.1をサポートする**NVIDIA**グラフィックカードを推奨。
+* VRAM: 4GB以上。8GB以上を推奨。
+* RAM: 4GB以上
+* HDD: インストール時に少なくとも20GBの空き容量が必要
+* インターネット接続が必要（インストールと翻訳作業）
 
 
-## 実行要件
-* OS : Windows 10/11 (64bits) **※ Linux, Mac OSには対応しておりません。**
-* CPU: Intelプロセッサ 2GHz以上(または同等の互換プロセッサ)
-* RAM: 16GB 以上
-* HDD: 20GB以上の空き容量(インストール時)
-* GPU: :CUDA 12.3に対応するNVIDIAグラフィックカードを推奨。VRAM 6GB以上。
-* インターネット接続環境必須(インストール時)
+## 📀 インストール
 
+Kara-Audioはワンクリックで簡単にインストールできます。🚀**configure.bat**と🚀**start.bat**を実行するだけです。
 
-## インストールと実行
-
-### step 1. パッケージの準備
-* A.有料バージョン
-    + USBに含まれる圧縮ファイル（**kara-audio-x.zip**）をコンピュータの適切な場所に解凍する
-    + またはすでに解凍されているフォルダ（**kara-audio-x**）をコンピュータの適切な場所にコピーする
-
+### ステップ1. パッケージの準備
+* A. 有料版
+    + USBに含まれる圧縮ファイル（**kara-audio-x.zip**）をコンピューターの適切な場所に解凍します。
+    + または、すでに解凍されているフォルダ（**kara-audio-x**）をコンピューターの適切な場所にコピーします。
 * B. 無料版
-  + [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/releases) から最新リリース (**Source code (zip)**) ダウンロード後に解凍
-  + または、git cloneでソースコードをダウンロードする
+  + [![GitHub Release](https://img.shields.io/github/v/release/abus-aikorea/kara-audio)](https://github.com/abus-aikorea/kara-audio/)から最新リリース（**Source code (zip)**）をクローンまたはダウンロードします。
 
-```bash
-git clone https://github.com/abus-aikorea/kara-audio.git
-```
+### ステップ2. プログラムのインストールと実行
+1. 🚀 `configure.bat`を実行
+   - Windows上にgit、ffmpeg、CUDA（NVIDIAのGPUを使用する場合）をインストールします。
+   - 初回のみ実行する必要があります。
+   - インターネット接続が必要で、システムによっては1時間以上かかる場合があります。
+   - インストール中はWindows-Commandウィンドウを絶対に閉じないでください。
+2. 🚀 `start.bat`を実行
+   - Kara-Audioを起動します。Web-UIが自動的に実行されます。
+   - 初回実行時は、まずKara-Audioがインストールされます。
+   - インターネット接続が必要で、システムによっては1時間以上かかる場合があります。
+   - インストール中はWindows-Commandウィンドウを絶対に閉じないでください。
+   - インストール中に問題が発生した場合は、**installer_files**フォルダを削除し、start.batを再度実行してください。
 
-## step 2. インストールして実行する方法
-
-0. 設置前
-   - Windows Updateを実行してシステムを最新の状態に更新します。
-   - NVIDIA Graphic Driverを最新の状態に更新します。
-
-1. `configure.bat`の実行
-     * WindowsにffmpegとCUDA（NVIDIA GPUを使用している場合）とWindows SDKをインストールします。
-     * インストールにはインターネットに接続する必要があり、コンピュータの仕様によっては1時間以上かかることがあります。
-     * インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。 （作業が止まったように見える場合は、スペースバーをたまに押してください）
-     * インストール中にエラーが発生した場合は、uninstall.batを実行してから最初から再起動することをお勧めします。
-     * configure.batは最初の1回だけ実行できます。
-
-2. `start.bat`の実行
-     - Kara-Audioを起動します。 Web-UIが自動的に起動します。 
-     - 初回実行時には、Kara-Audioのインストール作業を先に進めます。
-     - インストールにはインターネットに接続する必要があり、システムによっては1時間以上かかることがあります。
-     - インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。 （作業が止まったように見える場合は、スペースバーをたまに押してください）
-     - インストール中にエラーが発生した場合は、installer_filesフォルダを削除してstart.batを再実行してください。
-
-    #### Browserが自動的に実行されない場合
-    - Windows-Commnadウィンドウを終了し、start.batを再実行するか、
-    - Browserを直接実行し、Windows-Commnadウィンドウに表示されたアドレス（例：**http://127.0.0.1:7894** ）をアドレスウィンドウに入力します。
-
-
+### ステップ3. プログラムのアンインストール
+* `uninstall.bat`を実行:
+  - **installer_files**フォルダを削除します。
+  - Windows上にインストールされたffmpeg、git、CUDAパッケージを削除します（選択した場合）。
+* Kara-Audioは標準で**ポータブル**インストールです。プログラムをアンインストールするには、インストールフォルダを削除するだけで十分です。
 
 ## step 3. アンインストールする方法
 * `uninstall.bat`の実行
@@ -113,39 +91,63 @@ git clone https://github.com/abus-aikorea/kara-audio.git
 * Kara-Audioは**ポータブル**インストールがデフォルトです。 プログラムの削除は、インストールフォルダを削除するだけで十分です。
 
 
-## 使用のヒント
+## ❓ヒントとコツ
 
-1. Demixerの使用
-   - Facebook ResearchのDemucsモデル（htdemucs、htdemucs_6s、htdemucs_ft、mdx_extra）はすべて良いパフォーマンスを示しています。
-   - Demucsは低仕様PC（RAM 8GB）でも非常にうまく動作します。
-   - MDX-Netでは、UVR-MDX-NET-Voc_FT、Kim_Vocal_2、UVR_MDXNET_KARA_2などが良いパフォーマンスを示しています。
-   - MDX-Netモデルは、高仕様PC（RAM 16GB以上）でのみ動作します。
-   - モデルを一つずつ使ってみて、目的に合ったものを探してください。
-   - NVIDIA 最新のGPU(6GB以上のVRAM)の使用を推奨します. VRAMが不足すると、Out-Of-Memoryエラーが発生する可能性があります。
+#### ブラウザが自動的に起動しない場合
+- Windows-Commandウィンドウを閉じて、start.batを再度実行してください。
+- ブラウザを直接起動し、Windows-Commandウィンドウに表示されているアドレス（例：**http://127.0.0.1:7892**）をアドレスバーに入力してください。
 
-2. Whisperの使用
-   - Large-V2モデルが最適です。残りは認識率が悪い。
-   - オーディオの言語が「韓国語」の場合、Whisperの言語設定も「韓国語」にするのが最善です。
-   - オーディオの言語が「韓国語」のとき、Whisperの言語設定を「日本語」にすると「日本語」を出力しますが、精度は低下します。 （むしろグーグル翻訳者は良いです。）
-   - **Denoise**オプションを使用すると、MDX-Netモデルを使用してノイズを除去します。音声認識結果が良くなることがあります。 （高仕様PCでのみお使いください）
+#### CUDA Out-Of-Memoryエラーが発生した場合
+- WindowsタスクマネージャーのパフォーマンスタブでGPUメモリの状態を確認してください。
+- ノイズ除去レベルを0または1に設定してください。ノイズ除去レベル2には少なくとも8GBのGPUメモリが必要です。
+- Compute Typeをintタイプに設定してください。floatタイプは品質が良いですが、より多くのGPUメモリを必要とします。
 
-## 注意事項
-Windows Defenderが誤ってバッチファイルをトロイの木馬として認識している場合、これはしばしば「False Positive」と呼ばれます。この問題を解決するには、次の手順を実行できます。
+#### 字幕の品質を向上させるには？
+- 字幕の品質は、より大きなWhisperモデルで向上する傾向がありますが、必ずしもそうではありません。large > medium > small > base > tiny
+- Compute Typeの中では、floatタイプのパフォーマンスが良いです。intタイプはモデル量子化によってGPU使用量を減らし、速度を上げるモデルです。一方で、パフォーマンスは低下します。
+- ノイズ除去レベルを上げると、より多くのバックグラウンドサウンドが除去され、残った音声のみが音声認識に使用されます。必ずしも良い結果を保証するものではありません。
 
-1. ファイル例外処理：Windows Defenderでは、特定のファイルまたはプロセスがセキュリティチェックをスキップするように設定できます。これを行うには、以下の手順に従ってください
+#### Demixerの使用
+- Facebook ResearchのDemucsモデル（htdemucs、htdemucs_6s、htdemucs_ft、mdx_extra）はすべて良いパフォーマンスを示しています。
+- Demucsは低仕様PC（RAM 8GB）でも非常にうまく動作します。
+- MDX-Netでは、UVR-MDX-NET-Voc_FT、Kim_Vocal_2、UVR_MDXNET_KARA_2などが良いパフォーマンスを示しています。
+- MDX-Netモデルは、高仕様PC（RAM 16GB以上）でのみ動作します。
+- モデルを一つずつ使ってみて、目的に合ったものを探してください。
+- NVIDIA 最新のGPU(6GB以上のVRAM)の使用を推奨します. VRAMが不足すると、Out-Of-Memoryエラーが発生する可能性があります。
 
-   * 「スタート」ボタンをクリックして「設定」に進みます。
-   * [アップデートとセキュリティ]をクリックしてください。
-   * 「Windowsセキュリティ」を選択し、「ウイルスと脅威の保護」に進みます。
-   * [ウイルスと脅威の保護設定の管理]をクリックしてください。
-   * 「ウイルスと脅威の保護設定」で「例外を追加」を選択してください。
-   * 「ファイルまたはフォルダ」を選択し、問題のバッチファイルを見つけて例外として追加します。
-2.  Windows Defender をしばらく無効にする: この方法は一時的な解決策になります。ただし、この方法を使用すると、コンピュータが他の脅威にさらされる可能性があるため、注意が必要です。
-
-3. ワクチンソフトウェアに問題を提起: ファイルがトロイの木馬ではないという確信があれば、マイクロソフトに False Positive として情報を提供できます。マイクロソフトはこれを確認した後、必要な措置を講じます。
+#### Whisperの使用
+- Large-V2モデルが最適です。残りは認識率が悪い。
+- オーディオの言語が「韓国語」の場合、Whisperの言語設定も「韓国語」にするのが最善です。
+- オーディオの言語が「韓国語」のとき、Whisperの言語設定を「日本語」にすると「日本語」を出力しますが、精度は低下します。 （むしろグーグル翻訳者は良いです。）
+- **Denoise**オプションを使用すると、MDX-Netモデルを使用してノイズを除去します。音声認識結果が良くなることがあります。 （高仕様PCでのみお使いください）
 
 
-## 製品お問い合わせ
+
+
+## 📢 注意
+
+Windows Defenderは信頼できないアプリケーションに関する警告を表示し、Kara-Audioのさらなる実行を許可しない場合があります。
+SmartScreenのセキュリティレベルが「警告」に設定されている場合は、「詳細情報」をクリックし、その後「続行」をクリックしてください。
+SmartScreenが「ブロック」に設定されている場合、インストールを実行するボタンは表示されません。この場合、start.batファイルのプロパティを開き、「ブロック解除」をチェックし、変更を適用してからstart.batを再度実行してください。
+
+<p align="center">
+  <img style="width: 60%; height: 60%" src="images/windows_smartscreen_warning.png?raw=true" alt=""/>
+</p>  
+
+Windows Defenderがバッチファイルを誤ってトロイの木馬と認識した場合、これは「誤検出」と呼ばれることがよくあります。この問題を解決するには、以下の手順を行うことができます：
+
+1. ファイルの例外処理：Windows Defenderで、特定のファイルやプロセスをセキュリティスキャンの対象から除外するように設定できます。そのためには、以下の手順に従ってください：
+   * 「スタート」ボタンをクリックし、「設定」に進みます。
+   * 「更新とセキュリティ」をクリックします。
+   * 「Windowsセキュリティ」を選択し、「ウイルスと脅威の防止」に進みます。
+   * 「ウイルスと脅威の防止の設定を管理する」をクリックします。
+   * 「ウイルスと脅威の防止の設定」で「除外を追加または削除」を選択します。
+   * 「ファイルまたはフォルダー」を選択し、問題のバッチファイルを見つけて例外として追加します。
+2. Windows Defenderを一時的に無効にする：これは一時的な解決策かもしれません。ただし、この方法を使用する場合は、コンピューターが他の脅威にさらされる可能性があるため、注意が必要です。
+3. 問題をアンチウイルスソフトウェアに報告する：ファイルがトロイの木馬でないことが確実な場合、誤検出としてMicrosoftに報告することができます。Microsoftはこれをレビューし、必要な対応を取ります。
+
+
+## 📬 製品お問い合わせ
 * メール: <abus.aikorea@gmail.com>
 * ホームページ(韓国語): <https://abuskorea.imweb.me>
 * Amazon(USA): <https://www.amazon.com/dp/B0CTQQDPXT>
@@ -154,13 +156,13 @@ Windows Defenderが誤ってバッチファイルをトロイの木馬として�
 * Amazon(UAE): <https://www.amazon.ae/dp/B0DCGQ1FGC>
 * 네이버 스마트스토어(韓国語): <https://smartstore.naver.com/abus/category/ALL?cp=1>
 
-## YouTube
+## 👍 YouTube
 * 商品説明: <https://youtube.com/playlist?list=PLwx5dnMDVC9Y7dAjm9r26CZUw1uU5VIeq&si=873MgzUtu4POE9jO>
 * ホームカラオケ (Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9bVxfGo58U-R-w3fUHqwiD6&si=aWRDfF8TxFp2oAR0>
 * ホームカラオケ (K-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9Z8kB01tQKfzTysaCCxC3C8&si=1_-9p722rd_JXpzv>
 * ホームカラオケ (J-Pop): <https://youtube.com/playlist?list=PLwx5dnMDVC9apyxrP9LE9PiT821G7lJXk&si=0a474CP7ZIjMoGN9>
 
-## Credits
+## 🙏 Credits
 * UVR5: <https://github.com/Anjok07/ultimatevocalremovergui>
 * FacebookResearch Demucs: <https://github.com/facebookresearch/demucs>
 * OpenAI Whisper: <https://github.com/openai/whisper>
@@ -169,5 +171,5 @@ Windows Defenderが誤ってバッチファイルをトロイの木馬として�
 * gradio: <https://github.com/gradio-app/gradio>
 
 
-## 著作権
-<img src="images/ABUS-logo.jpg" width="100" height="100"> by [ABUS](https://slashpage.com/abus)
+## ©️ 著作権
+<img src="images/ABUS-logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
