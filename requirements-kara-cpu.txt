@@ -32,7 +32,7 @@ markdown
 rich
 # mdx
 librosa==0.9.1
-onnxruntime-gpu==1.17.1
+# onnxruntime-gpu==1.17.1
 # tts
 edge-tts
 python-iso639
@@ -42,7 +42,8 @@ jiwer
 evaluate
 uuid
 lingua-language-detector
-# PyTorch 2.4.0
-torch==2.4.0
-torchvision==0.19.0
-torchaudio==2.4.0
+
+# PyTorch 2.5.1
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
