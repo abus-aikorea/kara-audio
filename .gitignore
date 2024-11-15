@@ -181,3 +181,4 @@ requirements-cpu.txt
 requirements-gpu.txt
 temp_requirements.txt
 
+app/config-user.json5

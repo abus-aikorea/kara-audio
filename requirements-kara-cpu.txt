@@ -1,4 +1,6 @@
 structlog
+py-cpuinfo==9.0.0
+
 # for Whisper
 openai-whisper==20240930 #20231117
 faster-whisper==1.0.3
@@ -32,7 +34,6 @@ markdown
 rich
 # mdx
 librosa==0.9.1
-# onnxruntime-gpu==1.17.1
 # tts
 edge-tts
 python-iso639
