@@ -20,7 +20,9 @@ You can create transcripts, meeting minutes, as well as subtitles for movies, dr
 
 ### 🚄 Run screen
 
-https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38
+* `Kara Audio` Tab
+<video src="https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38" width="100%" style="max-width: 720px;" controls="controls" muted="muted"></video>
+
 
 
 ## ⭐ Key Features

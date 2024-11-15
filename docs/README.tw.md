@@ -19,7 +19,8 @@ Kara-Audio將YouTube視頻轉換為您自己的卡拉OK音樂視頻。
 
 ### 🚄 運行畫面
 
-https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38
+  * `Kara Audio` 標籤頁
+<video src="https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38" width="100%" style="max-width: 720px;" controls="controls" muted="muted"></video>
 
 
 ## ⭐ 主要功能

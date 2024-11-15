@@ -19,13 +19,15 @@ Kara-AudioはYouTube動画を自分のカラオケミュージックビデオに
 
 ### 🚄 実行画面
 
-https://github.com/abus-aikorea/kara-audio/assets/161691694/1255ca26-4454-4224-9558-921dc72295ef
+* `Kara Audio` タブ
+<video src="https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38" width="100%" style="max-width: 720px;" controls="controls" muted="muted"></video>
+
 
 
 
 ## ⭐ 主な機能
 
-* `スタジオ` タブ
+* `Kara Audio` タブ
   - YouTubeダウンローダ、ボーカル削除、自動字幕統合環境
 
 <p align="center">

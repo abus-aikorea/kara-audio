@@ -18,7 +18,8 @@ Kara-Audio는 YouTube 비디오를 당신만의 노래방 뮤비로 만들어 �
 
 ### 🚄 실행 화면
 
-https://github.com/abus-aikorea/kara-audio/assets/161691694/d085cebf-a1b9-4428-a7f3-a43610a5ab87
+* `Kara Audio` 탭
+<video src="https://github.com/abus-aikorea/kara-audio/assets/161691694/40bdc7d6-6924-4711-b3aa-b0af3ea29c38" width="100%" style="max-width: 720px;" controls="controls" muted="muted"></video>
 
 
 
