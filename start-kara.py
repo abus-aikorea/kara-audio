@@ -16,6 +16,8 @@ from app.abus_path import path_workspace_folder, path_gradio_folder
 
 # ABUS - start Kara
 genuine_init()
+AbusHuggingFace.initialize(app_name="kara")
+
 AbusHuggingFace.hf_download_models(file_type='mdxnet-model', level=0)
 AbusHuggingFace.hf_download_models(file_type='demucs', level=0)
 

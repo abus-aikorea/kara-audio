@@ -1,37 +1,36 @@
 structlog
 py-cpuinfo==9.0.0
-
+wget
 # for Whisper
-openai-whisper==20240930 #20231117
-faster-whisper==1.0.3
-whisper-timestamped==1.15.5 #1.15.4
+openai-whisper==20240930
+faster-whisper==1.1.0
+whisperx==3.3.1
+whisper-timestamped==1.15.8
+matplotlib
 ffmpeg-python==0.2.0
 # for Demucs
 demucs==4.0.1
-soundfile
-scipy
 invisible-watermark
 fonts
 font-roboto
 # gradio
-gradio==4.44.1
-gradio-client>=1.3.0
-websockets>=10.0,<13.0
-numpy==1.26.4
-fastapi==0.112.4
+gradio==5.14.0
+numpy<2
 pydantic==2.9.1
-yt-dlp<2024.10.22
+yt-dlp==2025.09.26
 browser_cookie3
 json5
 more_itertools
 pyyaml
 pandas==1.5.0
 Cython
-huggingface-hub==0.23.4
+huggingface-hub==0.27.1
+cached_path==1.6.7
 # one-click
 tqdm
 markdown
 rich
+ntplib
 # mdx
 librosa==0.9.1
 # tts
@@ -39,12 +38,11 @@ edge-tts
 python-iso639
 deep-translator
 pysubs2
-jiwer
-evaluate
-uuid
 lingua-language-detector
 
 # PyTorch 2.5.1
 torch==2.5.1
 torchvision==0.20.1
 torchaudio==2.5.1
+# etc
+onnxruntime==1.20.1
